@@ -9,9 +9,3 @@ services:
     envVars:
       - key: AIRFLOW__CORE__LOAD_EXAMPLES
         value: "false"
-
-      - key: AIRFLOW__API__HOST
-        value: "0.0.0.0"
-
-      - key: AIRFLOW__API__PORT
-        value: "10000"

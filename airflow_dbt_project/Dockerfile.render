@@ -7,9 +7,13 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-USER airflow
-
 COPY dags /opt/airflow/dags
 COPY walmart_project /opt/airflow/walmart_project
+COPY start_render.sh /opt/airflow/start_render.sh
 
-CMD ["standalone"]
+RUN chmod +x /opt/airflow/start_render.sh
+
+USER airflow
+
+ENTRYPOINT []
+CMD ["/bin/bash", "/opt/airflow/start_render.sh"]
