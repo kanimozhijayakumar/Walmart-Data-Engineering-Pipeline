@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: walmart-airflow-demo
+    runtime: docker
+    plan: free
+    rootDir: airflow_dbt_project
+    dockerfilePath: ./Dockerfile
+
+    envVars:
+      - key: AIRFLOW__CORE__LOAD_EXAMPLES
+        value: "false"
+      - key: AIRFLOW__CORE__EXECUTOR
+        value: SequentialExecutor
+
+    dockerCommand: airflow standalone
