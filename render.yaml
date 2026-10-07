@@ -9,7 +9,14 @@ services:
     envVars:
       - key: AIRFLOW__CORE__LOAD_EXAMPLES
         value: "false"
+
       - key: AIRFLOW__CORE__EXECUTOR
-        value: SequentialExecutor
+        value: LocalExecutor
+
+      - key: AIRFLOW__API__HOST
+        value: "0.0.0.0"
+
+      - key: AIRFLOW__API__PORT
+        value: "10000"
 
     dockerCommand: airflow standalone
