@@ -18,5 +18,3 @@ services:
 
       - key: AIRFLOW__API__PORT
         value: "10000"
-
-    dockerCommand: bash -c "airflow db migrate && airflow api-server --host 0.0.0.0 --port 10000"
