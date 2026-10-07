@@ -4,22 +4,14 @@ services:
     runtime: docker
     plan: free
     rootDir: airflow_dbt_project
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./Dockerfile.render
 
     envVars:
       - key: AIRFLOW__CORE__LOAD_EXAMPLES
         value: "false"
-
-      - key: AIRFLOW__CORE__EXECUTOR
-        value: LocalExecutor
 
       - key: AIRFLOW__API__HOST
         value: "0.0.0.0"
 
       - key: AIRFLOW__API__PORT
         value: "10000"
-
-      - key: _AIRFLOW_DB_MIGRATE
-        value: "true"
-
-    dockerCommand: api-server --host 0.0.0.0 --port 10000
