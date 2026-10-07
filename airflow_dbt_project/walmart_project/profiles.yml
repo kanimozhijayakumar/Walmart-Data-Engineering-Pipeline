@@ -1,0 +1,12 @@
+walmart_project:
+  outputs:
+    dev:
+      type: postgres
+      host: host.docker.internal
+      user: kanimozhi
+      password: ""
+      port: 5432
+      dbname: walmart_db
+      schema: public
+      threads: 1
+  target: dev
