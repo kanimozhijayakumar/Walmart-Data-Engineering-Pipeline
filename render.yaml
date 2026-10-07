@@ -9,3 +9,6 @@ services:
     envVars:
       - key: AIRFLOW__CORE__LOAD_EXAMPLES
         value: "false"
+
+      - key: AIRFLOW__CORE__EXECUTOR
+        value: SequentialExecutor
