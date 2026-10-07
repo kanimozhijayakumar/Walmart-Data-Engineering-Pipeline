@@ -9,10 +9,9 @@ The pipeline ingests Walmart retail data, orchestrates transformations with Airf
 ## Architecture
 
 <p align="center">
-  <img src="docs/walmart-data-engineering-architecture.png"
+  <img src="docs/docs/walmart-data-engineering-architecture.png"
        width="100%">
 </p>
-
 ---
 
 ## Tech Stack
